@@ -2,4 +2,12 @@ from django.shortcuts import render
 
 # Create your views here.
 def my_view(request):
-    return render(request, "first_app/car_list.html")
+    car_list = [
+        {"title": "Toyota"},
+        {"title": "Honda"},
+    ]
+    context = {
+        'car_list': car_list
+    }
+    
+    return render(request, "first_app/car_list.html", context)

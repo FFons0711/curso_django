@@ -18,6 +18,11 @@
         <![endif]-->
         
         <script src="" async defer></script>
-        Esta es la lista de carros
+        <h1>Lista de carros</h1>
+        <ul>
+            {% for car in car_list  %}
+                <li>{{car.title}}</li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
